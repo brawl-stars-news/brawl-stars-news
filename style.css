@@ -1,0 +1,7 @@
+img {
+    max-width: 100%; /* L'immagine non sarà mai più larga dello schermo */
+    height: auto;    /* Mantiene le proporzioni corrette */
+    display: block;
+    margin: 0 auto;  /* La centra */
+}
+

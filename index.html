@@ -1,53 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="style.css">
+    <title>Quiz Brawl Stars</title>
 </head>
-<body style="background-color: black; color: white; text-align: center; font-family: Arial;">
-
-<nav style="padding: 20px; border-bottom: 2px solid #333; font-size: 30px;">
-    <a href="index.html" style="color: white; margin: 0 15px; text-decoration: none; border: 2px solid white; padding: 10px 20px; border-radius: 8px;">Home</a>
-    <a href="news.html" style="color: white; margin: 0 15px; text-decoration: none; border: 2px solid white; padding: 10px 20px; border-radius: 8px;">News</a>
-    <a href="quiz.html" style="color: white; margin: 0 15px; text-decoration: none; border: 2px solid white; padding: 10px 20px; border-radius: 8px;">Quiz</a>
-</nav>
-
-<h1 style="font-size: 50px; margin: 10px 0;">Benvenuti nella home</h1>
-
-<img src="1000053663.jpg" style="width: 100%; height: auto; display: block;">
-
-<div style="margin-top: -40px;">
-    <h3 style="color: white; font-size: 40px; margin-bottom: 20px;">SEGUITEMI NEI SOCIAL</h3>
+<body style="background-color: black; color: white; padding: 20px;">
+    <h1>Quiz Facili</h1>
     
-    <a href="https://whatsapp.com/channel/0029VbBLipJIHphC32JNQA1s" target="_blank" 
-       style="display: inline-block; padding: 15px 30px; margin: 10px; background-color: green; color: white; text-decoration: none; border-radius: 10px; font-size: 25px; font-weight: bold;">
-       Canale WhatsApp
-    </a>
+    <div id="quiz-container">
+        <div style="margin-bottom: 20px; border: 1px solid white; padding: 10px;">
+            <p>Quale Brawler è il terzo membro del trio di Barryl e Tick?</p>
+            <button onclick="checkAnswer(this, true)">Penny</button>
+            <button onclick="checkAnswer(this, false)">Sam</button>
+            <button onclick="checkAnswer(this, false)">Eve</button>
+            <button onclick="checkAnswer(this, false)">Dynamike</button>
+        </div>
+    </div>
 
-    <a href="https://www.tiktok.com/@rayxbss?_r=1&_t=ZN-97M2M2" target="_blank" 
-       style="display: inline-block; padding: 15px 30px; margin: 10px; background-color: black; color: white; text-decoration: none; border: 2px solid white; border-radius: 10px; font-size: 25px; font-weight: bold;">
-       Canale TikTok
-    </a>
-</div>
-
+    <script>
+    function checkAnswer(button, isCorrect) {
+        button.style.backgroundColor = isCorrect ? "green" : "red";
+        button.style.color = "white";
+        let parent = button.parentElement;
+        let buttons = parent.getElementsByTagName("button");
+        for (let b of buttons) {
+            b.disabled = true;
+        }
+    }
+    </script>
 </body>
 </html>
-<section id="quiz" style="margin-top: 20px; padding: 10px; border-top: 1px solid white;">
-    <h2 style="color: white;">Quiz Facili</h2>
-    <div class="quiz-item" style="margin-bottom: 20px;">
-        <p style="color: white;">Quale Brawler è il terzo membro del trio di Barryl e Tick?</p>
-        <button onclick="checkAnswer(this, true)">Penny</button>
-        <button onclick="checkAnswer(this, false)">Sam</button>
-        <button onclick="checkAnswer(this, false)">Eve</button>
-        <button onclick="checkAnswer(this, false)">Dynamike</button>
-    </div>
-</section>
 
-<script>
-function checkAnswer(button, isCorrect) {
-    button.style.backgroundColor = isCorrect ? "green" : "red";
-    button.style.color = "white";
-    let buttons = button.parentElement.getElementsByTagName("button");
-    for (let b of buttons) b.disabled = true;
-}
-</script>
-
+    

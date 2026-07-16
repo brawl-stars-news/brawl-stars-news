@@ -15,4 +15,74 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .quiz-container { max-width: 600px; margin: 20px auto; padding: 20px; border: 1px solid white; border-radius: 10px; }
+        button { display: block; width: 100%; margin: 10px 0; padding: 10px; cursor: pointer; font-size: 18px; border-radius: 5px; border: 1px solid #555; }
+    </style>
+</head>
+<body style="background-color: black; color: white; text-align: center; font-family: Arial;">
+
+<nav style="padding: 20px; border-bottom: 2px solid #333; font-size: 30px;">
+    <a href="index.html" style="color: white; margin: 0 15px; text-decoration: none; border: 2px solid white; padding: 10px 20px; border-radius: 8px;">Home</a>
+    <a href="news.html" style="color: white; margin: 0 15px; text-decoration: none; border: 2px solid white; padding: 10px 20px; border-radius: 8px;">News</a>
+    <a href="quiz.html" style="color: white; margin: 0 15px; text-decoration: none; border: 2px solid white; padding: 10px 20px; border-radius: 8px;">Quiz</a>
+</nav>
+
+<h1>Quiz Brawl Stars</h1>
+<h2>Parte Facile</h2>
+
+<div class="quiz-container">
+    <p>Quale Brawler è il terzo membro del trio di Barryl e Tick?</p>
+    <button onclick="check(this, true)">Penny</button>
+    <button onclick="check(this, false)">Sam</button>
+    <button onclick="check(this, false)">Eve</button>
+    <button onclick="check(this, false)">Dynamike</button>
+</div>
+
+<div class="quiz-container">
+    <p>Quale brawler carica naturalmente la sua super nel tempo?</p>
+    <button onclick="check(this, false)">Rico</button>
+    <button onclick="check(this, false)">Bo</button>
+    <button onclick="check(this, false)">Carl</button>
+    <button onclick="check(this, true)">Barryl</button>
+</div>
+
+<div class="quiz-container">
+    <p>Qual è stata la prima coppia ufficiale di Brawl Stars?</p>
+    <button onclick="check(this, false)">Max & Surge</button>
+    <button onclick="check(this, false)">Bo e Charlie</button>
+    <button onclick="check(this, true)">Rico e Piper</button>
+    <button onclick="check(this, false)">Crow & Piper</button>
+</div>
+
+<div class="quiz-container">
+    <p>Chi è stato il primo a raggiungere 100.000 trofei totali?</p>
+    <button onclick="check(this, false)">Eqwaak</button>
+    <button onclick="check(this, false)">Physic</button>
+    <button onclick="check(this, true)">Hyra</button>
+    <button onclick="check(this, false)">Elox</button>
+</div>
+
+<div class="quiz-container">
+    <p>Qual era il nome che Pam avrebbe dovuto avere in origine?</p>
+    <button onclick="check(this, true)">Mama J</button>
+    <button onclick="check(this, false)">Mamma</button>
+    <button onclick="check(this, false)">Pamela</button>
+    <button onclick="check(this, false)">Big Mama</button>
+</div>
+
+<script>
+function check(btn, isCorrect) {
+    btn.style.backgroundColor = isCorrect ? "green" : "red";
+    let btns = btn.parentElement.querySelectorAll("button");
+    btns.forEach(b => b.disabled = true);
+}
+</script>
+
+</body>
+</html>
 

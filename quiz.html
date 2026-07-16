@@ -3,36 +3,11 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Titoli */
         h1 { font-size: 50px !important; margin: 10px 0 !important; }
         h2 { font-size: 35px !important; margin-bottom: 20px !important; }
-        
-        .quiz-container { 
-            max-width: 800px; 
-            margin: 30px auto; 
-            padding: 30px;    
-            border: 2px solid white; 
-            border-radius: 15px; 
-        }
-        
-        /* Domande ancora più grandi */
-        .quiz-container p { 
-            font-size: 32px;  
-            margin-bottom: 25px;
-            font-weight: bold;
-        }
-
-        /* Bottoni e testo dentro le opzioni molto più grandi */
-        button { 
-            display: block; 
-            width: 100%; 
-            margin: 15px 0;   
-            padding: 25px;    
-            cursor: pointer; 
-            font-size: 28px;  
-            border-radius: 8px; 
-            border: 1px solid #555; 
-        }
+        .quiz-container { max-width: 800px; margin: 30px auto; padding: 30px; border: 2px solid white; border-radius: 15px; }
+        .quiz-container p { font-size: 32px; margin-bottom: 25px; font-weight: bold; }
+        button { display: block; width: 100%; margin: 15px 0; padding: 25px; cursor: pointer; font-size: 28px; border-radius: 8px; border: 1px solid #555; }
     </style>
 </head>
 <body style="background-color: black; color: white; text-align: center; font-family: Arial;">
@@ -84,6 +59,30 @@
     <button onclick="check(this, false)">Mamma</button>
     <button onclick="check(this, false)">Pamela</button>
     <button onclick="check(this, false)">Big Mama</button>
+</div>
+
+<div class="quiz-container">
+    <p>Quale brawler ha la Super che gli permetteva di teletrasportarsi?</p>
+    <button onclick="check(this, false)">Edgar</button>
+    <button onclick="check(this, true)">Gray</button>
+    <button onclick="check(this, false)">Stu</button>
+    <button onclick="check(this, false)">Gene</button>
+</div>
+
+<div class="quiz-container">
+    <p>Quale brawler può saltare con la sua Super?</p>
+    <button onclick="check(this, true)">El Primo</button>
+    <button onclick="check(this, false)">Tara</button>
+    <button onclick="check(this, false)">Spike</button>
+    <button onclick="check(this, false)">Frank</button>
+</div>
+
+<div class="quiz-container">
+    <p>Chi è noto per essere un cecchino a lunga distanza?</p>
+    <button onclick="check(this, true)">Piper</button>
+    <button onclick="check(this, false)">Bell</button>
+    <button onclick="check(this, false)">Angelo</button>
+    <button onclick="check(this, false)">Colt</button>
 </div>
 
 <script>

@@ -31,4 +31,23 @@
 
 </body>
 </html>
+<section id="quiz" style="margin-top: 20px; padding: 10px; border-top: 1px solid white;">
+    <h2 style="color: white;">Quiz Facili</h2>
+    <div class="quiz-item" style="margin-bottom: 20px;">
+        <p style="color: white;">Quale Brawler è il terzo membro del trio di Barryl e Tick?</p>
+        <button onclick="checkAnswer(this, true)">Penny</button>
+        <button onclick="checkAnswer(this, false)">Sam</button>
+        <button onclick="checkAnswer(this, false)">Eve</button>
+        <button onclick="checkAnswer(this, false)">Dynamike</button>
+    </div>
+</section>
+
+<script>
+function checkAnswer(button, isCorrect) {
+    button.style.backgroundColor = isCorrect ? "green" : "red";
+    button.style.color = "white";
+    let buttons = button.parentElement.getElementsByTagName("button");
+    for (let b of buttons) b.disabled = true;
+}
+</script>
 

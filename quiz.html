@@ -3,30 +3,33 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Aumentiamo la grandezza dei contenitori e dei testi */
+        /* Titoli */
         h1 { font-size: 50px !important; margin: 10px 0 !important; }
         h2 { font-size: 35px !important; margin-bottom: 20px !important; }
         
         .quiz-container { 
-            max-width: 800px; /* Più largo */
+            max-width: 800px; 
             margin: 30px auto; 
-            padding: 30px;    /* Più lungo/spazioso */
+            padding: 30px;    
             border: 2px solid white; 
             border-radius: 15px; 
         }
         
+        /* Domande ancora più grandi */
         .quiz-container p { 
-            font-size: 24px;  /* Domande più grandi */
-            margin-bottom: 20px;
+            font-size: 32px;  
+            margin-bottom: 25px;
+            font-weight: bold;
         }
 
+        /* Bottoni e testo dentro le opzioni molto più grandi */
         button { 
             display: block; 
             width: 100%; 
-            margin: 15px 0;   /* Più spazio tra i bottoni */
-            padding: 20px;    /* Bottoni più grandi */
+            margin: 15px 0;   
+            padding: 25px;    
             cursor: pointer; 
-            font-size: 22px;  /* Testo risposte più grande */
+            font-size: 28px;  
             border-radius: 8px; 
             border: 1px solid #555; 
         }
@@ -43,7 +46,6 @@
 <h1>Quiz Brawl Stars</h1>
 <h2>Parte Facile</h2>
 
-<!-- Qui sotto rimangono i tuoi blocchi di quiz che funzionano già -->
 <div class="quiz-container">
     <p>Quale Brawler è il terzo membro del trio di Barryl e Tick?</p>
     <button onclick="check(this, true)">Penny</button>

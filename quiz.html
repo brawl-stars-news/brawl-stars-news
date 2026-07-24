@@ -185,12 +185,24 @@
 
 <script>
 function check(btn, isCorrect) {
-    btn.style.backgroundColor = isCorrect ? "green" : "red";
     let btns = btn.parentElement.querySelectorAll("button");
+    
+    // Coloriamo il pulsante cliccato
+    btn.style.backgroundColor = isCorrect ? "green" : "red";
+    
+    // Se la risposta è sbagliata, evidenziamo anche quella corretta in verde
+    if (!isCorrect) {
+        btns.forEach(b => {
+            if (b.getAttribute("onclick").includes("true")) {
+                b.style.backgroundColor = "green";
+            }
+        });
+    }
+
+    // Disabilitiamo tutti i pulsanti della domanda
     btns.forEach(b => b.disabled = true);
 }
 </script>
 
 </body>
 </html>
-
